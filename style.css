@@ -1,0 +1,248 @@
+/* ======== ESTILO GERAL ======== */
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+/* ======== CARTÕES (SEÇÕES) ======== */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* ======== CAMPOS DE FORMULÁRIO ======== */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.input-field input,
+.input-field select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 38px; /* altura fixa igual para input e select */
+  box-sizing: border-box; /* garante que padding não aumente altura */
+}
+
+.italico {
+  font-style: italic;
+  color: #888; /* opcional, só para dar contraste */
+}
+
+/* ======== SELECT PLACEHOLDER (Escolha) ======== */
+#embalagem:invalid {
+  color: #888;
+}
+
+/* ======== BOTÕES ======== */
+.btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.green {
+  background-color: #2e7d32;
+}
+
+.red {
+  background-color: #c62828;
+}
+
+.blue {
+  background-color: #1565c0;
+}
+
+/* 🔸 Botão "Atualizar" */
+.orange {
+  background-color: #f39c12;
+}
+
+.small {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+.center button {
+  margin: 6px;
+}
+
+/* Espaço maior entre tabela e botões */
+.center.section {
+  margin-top: 25px;
+}
+
+/* ======== TABELA ======== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #e0e0e0;
+}
+
+/* ======== LINHA SELECIONADA ======== */
+tr.editando {
+  background-color: #fff3e0; /* fundo laranja claro */
+  transition: background-color 0.3s ease;
+}
+
+tr.editando td {
+  font-weight: bold;
+  color: #e65100; /* texto laranja escuro */
+}
+
+/* ======== LISTAS SALVAS ======== */
+.listas-salvas {
+  max-height: 40vh; /* altura máxima na tela */
+  overflow-y: auto; /* rolagem vertical */
+  padding-right: 5px;
+}
+
+.lista-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.lista-info {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.lista-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+/* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
+h6 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* distância entre "Itens da Lista" e o nome do mercado */
+}
+
+#nomeMercadoAtual {
+  font-size: 1rem; /* igual aos inputs */
+  font-weight: 600;
+  color: #1565c0;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .listas-salvas {
+    max-height: 50vh;
+  }
+
+  .lista-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lista-botoes {
+    margin-top: 6px;
+  }
+
+  #nomeMercadoAtual {
+    font-size: 1.1rem;
+  }
+}
+
+/* CSS para reduzir todos os SweetAlerts no celular */
+/* Ajuste geral para todos os SweetAlerts */
+.swal2-popup {
+  width: 80% !important;
+  max-width: 260px !important;
+  padding: 0.8rem !important;
+  font-size: 14px !important;
+}
+
+.swal2-title {
+  font-size: 18px !important;
+}
+
+.swal2-html-container {
+  font-size: 14px !important;
+}
+
+.swal2-icon {
+  transform: scale(0.7) !important;
+  margin-bottom: 10px !important;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+  font-size: 14px !important;
+  padding: 6px 12px !important;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa Mercados</title>
+
+  <!-- Ícone e Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <div class="container">
+    <h4 class="center">📋 Pesquisa Mercados</h4>
+
+    <!-- Formulário de entrada -->
+    <div class="card">
+      <div class="form-row">
+        <div class="input-field">
+          <label for="mercado">Nome do Mercado</label>
+          <input id="mercado" type="text">
+        </div>
+        <div class="input-field">
+          <label for="produto">Produto</label>
+          <input id="produto" type="text">
+        </div>
+        <div class="input-field">
+          <label for="embalagem">Embalagem</label>
+		<select id="embalagem" required>
+		  <option value="" disabled selected hidden>Escolha</option>
+		  <option value="20 un">20 un</option>
+		  <option value="30 un">30 un</option>
+		  <option value="1 kg">1 kg</option>
+		  <option value="5 kg">5 kg</option>
+		  <option value="50 g">50 g</option>
+		  <option value="100 g">100 g</option>
+		  <option value="250 g">250 g</option>
+		  <option value="300 g">300 g</option>
+		  <option value="350 g">350 g</option>
+		  <option value="500 g">500 g</option>
+		  <option value="250 ml">250 ml</option>
+		  <option value="500 ml">500 ml</option>
+		  <option value="900 ml">900 ml</option>
+		</select>
+        </div>
+        <div class="input-field">
+          <label for="valor">Valor (R$)</label>
+          <input id="valor" type="number" min="0" step="0.01" placeholder="0.00">
+        </div>
+      </div>
+      <div class="center">
+        <button id="adicionar" class="btn green">Adicionar</button>
+      </div>
+    </div>
+
+    <!-- Lista atual -->
+    <div class="card">
+<h6 id="titulo-lista">
+  <strong>Itens da Lista</strong>
+  <span id="nomeMercadoAtual"></span>
+</h6>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Embalagem</th>
+            <th>Valor (R$)</th>
+          </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+
+      <div class="center section">
+        <button id="salvarLista" class="btn blue">Salvar Lista</button>
+        <button id="apagarTudo" class="btn red">Limpar Lista</button>
+      </div>
+    </div>
+
+    <!-- Listas salvas -->
+    <div class="card">
+      <h6><strong>Listas Salvas</strong></h6>
+      <div id="listasContainer" class="listas-salvas"></div>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
