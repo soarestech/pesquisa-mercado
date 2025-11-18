@@ -1,5 +1,5 @@
 {
-  "name": "Pesquisa Mercados",
+  "name": "pesquisa-mercado",
   "short_name": "Mercados",
   "start_url": "./index.html",
   "display": "standalone",
@@ -18,3 +18,4 @@
     }
   ]
 }
+
