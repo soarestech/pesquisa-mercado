@@ -1,4 +1,4 @@
-const CACHE_NAME = "pesquisa-mercados-v2"; // incrementado!
+const CACHE_NAME = "pesquisa-mercado-v2"; // incrementado!
 
 const urlsToCache = [
   "./index.html",
@@ -34,3 +34,4 @@ self.addEventListener("fetch", event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+
