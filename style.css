@@ -177,7 +177,7 @@ tr.editando td {
 h6 {
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   gap: 10px; /* distância entre "Itens da Lista" e o nome do mercado */
 }
 
@@ -247,5 +247,6 @@ h6 {
   font-size: 14px !important;
   padding: 6px 12px !important;
 }
+
 
 
