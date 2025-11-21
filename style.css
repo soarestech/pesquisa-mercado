@@ -288,13 +288,14 @@ h6 {
 
 /* ====== LEGENDA ====== */
 .legenda {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding-left: 5px;
   font-size: 0.85rem;
 }
 
 .item-legenda {
   display: flex;
+  margin-top: -15px !important; /* subir um pouco */
   align-items: center;
   gap: 6px;
   margin: 3px 0;
@@ -325,3 +326,4 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
