@@ -107,7 +107,7 @@ apagarTudoBtn.addEventListener('click', () => {
   mercadoInput.value = '';
   atualizarNomeMercado();
 
-  // 🔥 Correção para limpar os inputs (se clicou em um item antes)
+  // Correção para limpar os inputs (se clicou em um item antes)
   produtoInput.value = '';
   embalagemSelect.selectedIndex = 0;
   valorInput.value = '';
@@ -227,7 +227,7 @@ apagarTudoBtn.addEventListener('click', () => {
       listas.forEach(listaObj => {
         // Cabeçalho na mesma linha
         conteudo += `MERCADO: ${listaObj.mercado}    DATA: ${listaObj.data}\n`;
-        conteudo += '----------------------------------------------\n';
+        conteudo += '------------------------------------------------------\n';
 
         // Cabeçalho da "tabela"
         conteudo += 'Produto'.padEnd(25) + 'Embalagem'.padEnd(18) + 'Valor (R$)\n';
@@ -254,23 +254,5 @@ apagarTudoBtn.addEventListener('click', () => {
       URL.revokeObjectURL(url);
     });
   })();
-  // ============================
 
-  // ============================
-  // OBS: Estilos CSS para .legenda, .quadrado, .valor-verde e .valor-vermelho
-  // Caso ainda não esteja no seu style.css, adicione:
-  //
-  // .legenda { margin-bottom: 10px; padding-left: 5px; font-size: 0.9rem; }
-  // .item-legenda { display:flex; align-items:center; gap:8px; margin:2px 0; }
-  // .quadrado { width:14px; height:14px; border-radius:3px; display:inline-block; }
-  // .quadrado.verde, .quadrado[style*="background:green"] { background:#2ecc71; }
-  // .quadrado.vermelho, .quadrado[style*="background:red"] { background:#e74c3c; }
-  // .valor-verde { color:#2ecc71 !important; font-weight:bold; }
-  // .valor-vermelho { color:#e74c3c !important; font-weight:bold; }
-  //
-  // (Adicione apenas se preferir manter estilos no CSS ao invés de inline)
-  // ============================
 });
-
-
-
