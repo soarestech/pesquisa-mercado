@@ -16,6 +16,18 @@ body {
   text-align: center;
 }
 
+h4.center {
+    display: flex;
+    justify-content: center;   /* centraliza horizontal */
+    align-items: center;       /* centraliza vertical */
+    width: 100%;               /* garante ocupar a linha inteira */
+    gap: 8px;                         /* espaço entre ícone e texto */
+    margin-top: -12px !important;     /* sobe o título */
+    margin-bottom: 20px !important;   /* separa do card do formulário */
+    font-size: 1.20rem !important;    /* aumento leve */
+    font-weight: 450;                 /* deixa mais elegante */
+    padding: 0 !important;     /* evita deslocamento no mobile */
+}
 /* Título principal do app */
 h4 {
     display: flex;
@@ -323,6 +335,7 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
 
 
