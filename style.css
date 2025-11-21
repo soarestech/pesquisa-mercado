@@ -101,9 +101,20 @@ h4 {
   background-color: #f39c12;
 }
 
+/* Tamanho padrão (notebook / desktop) */
 button.small {
     font-size: 12px;
-    padding: 4px 8px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Celulares (telas menores que 480px) */
+@media (max-width: 480px) {
+    button.small {
+        font-size: 11px;
+        padding: 3px 6px;
+        border-radius: 5px;
+    }
 }
 
 .small {
@@ -304,3 +315,4 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
