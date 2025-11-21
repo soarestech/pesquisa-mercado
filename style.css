@@ -19,8 +19,8 @@ body {
 /* Título principal do app */
 h4 {
     margin-top: -8px !important;      /* sobe o título */
-    margin-bottom: 25px !important;   /* separa do card do formulário */
-    font-size: 1.45rem !important;    /* aumento leve (padrão é 1.3 rem) */
+    margin-bottom: 30px !important;   /* separa do card do formulário */
+    font-size: 1.40rem !important;    /* aumento leve (padrão é 1.3 rem) */
     font-weight: 600;                 /* deixa mais elegante sem exagero */
 }
 
@@ -319,5 +319,6 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
 
