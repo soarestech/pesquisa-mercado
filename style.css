@@ -28,17 +28,6 @@ h4.center {
     font-weight: 450;                 /* deixa mais elegante */
     padding: 0 !important;     /* evita deslocamento no mobile */
 }
-/* Título principal do app */
-h4 {
-    display: flex;
-    align-items: center;              /* centraliza verticalmente */
-    justify-content: center;          /* centraliza horizontalmente */
-    gap: 8px;                         /* espaço entre ícone e texto */
-    margin-top: -12px !important;     /* sobe o título */
-    margin-bottom: 20px !important;   /* separa do card do formulário */
-    font-size: 1.20rem !important;    /* aumento leve */
-    font-weight: 450;                 /* deixa mais elegante */
-}
 
 /* ======== CARTÕES (SEÇÕES) ======== */
 .card {
@@ -335,6 +324,7 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
 
 
