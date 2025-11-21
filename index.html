@@ -90,13 +90,28 @@
     </div>
 
     <!-- Listas salvas -->
-    <div class="card">
-      <h6><strong>Listas Salvas</strong></h6>
-      <div id="listasContainer" class="listas-salvas"></div>
-    </div>
+	<div class="card">
+	  <h6 style="justify-content: space-between; display: flex; align-items: center;">
+		<strong>Listas Salvas</strong>
+		<button id="exportarTXT" class="btn orange small">Exportar TXT</button>
+	  </h6>
+
+	  <!-- LEGENDA (NOVO) -->
+	  <div class="legenda">
+		<div class="item-legenda">
+		  <span class="quadrado verde"></span> O Valor(R$) abaixou!
+		</div>
+		<div class="item-legenda">
+		  <span class="quadrado vermelho"></span> O Valor(R$) aumentou!
+		</div>
+	  </div>
+
+	  <div id="listasContainer" class="listas-salvas"></div>
+	</div>
   </div>
 
   <!-- Script principal -->
   <script src="script.js"></script>
 </body>
 </html>
+
