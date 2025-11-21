@@ -15,24 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let indiceEdicao = null; // guarda o índice do item que está sendo editado
 
   // ============================
-  // ⭐ ADIÇÕES: inserir legenda (quadradinhos) abaixo do título "Listas Salvas"
-  // Inserimos a legenda no DOM, antes do container das listas salvas.
-  (function inserirLegenda() {
-    try {
-      const legendaEl = document.createElement('div');
-      legendaEl.className = 'legenda'; // caso você queira estilizar via CSS
-      legendaEl.innerHTML = `
-        <div class="item-legenda"><span class="quadrado verde" aria-hidden="true"></span> O Valor(R$) abaixou!</div>
-        <div class="item-legenda"><span class="quadrado vermelho" aria-hidden="true"></span> O Valor(R$) aumentou!</div>
-      `;
-      // coloca a legenda logo antes do listasContainer
-      listasContainer.parentNode.insertBefore(legendaEl, listasContainer);
-    } catch (e) {
-      // não interrompe a execução caso algo dê errado
-      console.warn('Erro ao inserir legenda:', e);
-    }
-  })();
-  // ============================
 
   function atualizarLista() {
     lista.innerHTML = '';
@@ -281,4 +263,5 @@ document.addEventListener('DOMContentLoaded', function () {
   // (Adicione apenas se preferir manter estilos no CSS ao invés de inline)
   // ============================
 });
+
 
