@@ -101,17 +101,25 @@ document.addEventListener('DOMContentLoaded', function () {
     atualizarNomeMercado();
   });
 
-  apagarTudoBtn.addEventListener('click', () => {
-    produtos = [];
-    atualizarLista();
-    mercadoInput.value = '';
-    atualizarNomeMercado();
-    indiceEdicao = null;
-    adicionarBtn.textContent = 'Adicionar';
-    adicionarBtn.classList.remove('orange');
-    adicionarBtn.classList.add('green');
-    Swal.fire('Lista limpa!');
-  });
+apagarTudoBtn.addEventListener('click', () => {
+  produtos = [];
+  atualizarLista();
+  mercadoInput.value = '';
+  atualizarNomeMercado();
+
+  // 🔥 Correção para limpar os inputs (se clicou em um item antes)
+  produtoInput.value = '';
+  embalagemSelect.selectedIndex = 0;
+  valorInput.value = '';
+  indiceEdicao = null;
+  document.querySelectorAll('#lista tr').forEach(tr => tr.classList.remove('editando'));
+
+  adicionarBtn.textContent = 'Adicionar';
+  adicionarBtn.classList.remove('orange');
+  adicionarBtn.classList.add('green');
+
+  Swal.fire('Lista limpa!');
+});
 
   // SALVAR LISTA (mantemos cores dos itens porque produtos[] já contém 'cor')
   salvarListaBtn.addEventListener('click', () => {
@@ -263,5 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // (Adicione apenas se preferir manter estilos no CSS ao invés de inline)
   // ============================
 });
+
 
 
