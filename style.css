@@ -22,6 +22,7 @@ h4 {
     margin-bottom: 40px !important;   /* separa do card do formulário */
     font-size: 1.20rem !important;    /* aumento leve (padrão é 1.3 rem) */
     font-weight: 500;                 /* deixa mais elegante sem exagero */
+}
 
 /* ======== CARTÕES (SEÇÕES) ======== */
 .card {
@@ -318,6 +319,7 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
 
 
