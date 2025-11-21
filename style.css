@@ -177,7 +177,7 @@ tr.editando td {
 h6 {
   display: flex;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* igual aos inputs */
   gap: 10px; /* distância entre "Itens da Lista" e o nome do mercado */
 }
 
@@ -247,6 +247,59 @@ h6 {
   font-size: 14px !important;
   padding: 6px 12px !important;
 }
+
+/* ======== AJUSTES DE POSIÇÃO NOS TÍTULOS ======== */
+
+/* Título principal do app */
+h4 {
+  margin-bottom: 10px !important; /* subir um pouco */
+}
+
+/* Títulos "Itens da Lista" e "Listas Salvas" */
+h6 {
+  margin-top: -5px !important; /* subir um pouco */
+}
+
+/* ====== LEGENDA ====== */
+.legenda {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: 0.85rem;
+}
+
+.item-legenda {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 0;
+}
+
+.quadrado {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.verde {
+  background-color: #2ecc71;
+}
+
+.vermelho {
+  background-color: #e74c3c;
+}
+
+/* ===== COLORAÇÃO DOS VALORES ===== */
+.valor-verde {
+  color: #2ecc71 !important;
+  font-weight: bold;
+}
+
+.valor-vermelho {
+  color: #e74c3c !important;
+  font-weight: bold;
+}
+
 
 
 
