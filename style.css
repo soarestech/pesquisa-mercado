@@ -19,9 +19,9 @@ body {
 /* Título principal do app */
 h4 {
     margin-top: -12px !important;      /* sobe o título */
-    margin-bottom: 40px !important;   /* separa do card do formulário */
+    margin-bottom: 20px !important;   /* separa do card do formulário */
     font-size: 1.20rem !important;    /* aumento leve (padrão é 1.3 rem) */
-    font-weight: 500;                 /* deixa mais elegante sem exagero */
+    font-weight: 450;                 /* deixa mais elegante sem exagero */
 }
 
 /* ======== CARTÕES (SEÇÕES) ======== */
@@ -319,6 +319,7 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
 
 
