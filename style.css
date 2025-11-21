@@ -213,9 +213,9 @@ h6 {
     width: 100%;
   }
 
-  button {
-    width: 100%;
-    margin-top: 6px;
+  button:not(.small) {
+	width: 100%;
+	margin-top: 6px;
   }
 
   .listas-salvas {
@@ -315,4 +315,3 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
-
