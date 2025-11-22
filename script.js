@@ -230,7 +230,7 @@ apagarTudoBtn.addEventListener('click', () => {
         conteudo += '------------------------------------------------------\n';
 
         // Cabeçalho da "tabela"
-        conteudo += 'Produto'.padEnd(25) + 'Embalagem'.padEnd(18) + 'Preço (R$)\n';
+        conteudo += 'Produto'.padEnd(25) + 'Embalagem'.padEnd(18) + 'Valor (R$)\n';
 
         // Itens da lista: atenção aos nomes das propriedades (nome, embalagem, valor)
         (listaObj.produtos || []).forEach(item => {
@@ -241,7 +241,7 @@ apagarTudoBtn.addEventListener('click', () => {
           conteudo += nomeProduto.padEnd(25) + embal.padEnd(18) + valorStr.padEnd(10) + '\n';
         });
 
-        conteudo += '\n=====================================================\n\n';
+        conteudo += '\n==============================================\n\n';
       });
 
       // Cria e baixa o arquivo
@@ -256,5 +256,3 @@ apagarTudoBtn.addEventListener('click', () => {
   })();
 
 });
-
-
