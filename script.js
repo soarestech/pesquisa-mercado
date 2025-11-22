@@ -241,7 +241,7 @@ apagarTudoBtn.addEventListener('click', () => {
           conteudo += nomeProduto.padEnd(25) + embal.padEnd(18) + valorStr.padEnd(10) + '\n';
         });
 
-        conteudo += '\n==============================================\n\n';
+        conteudo += '\n======================================================\n\n';
       });
 
       // Cria e baixa o arquivo
@@ -256,3 +256,4 @@ apagarTudoBtn.addEventListener('click', () => {
   })();
 
 });
+
