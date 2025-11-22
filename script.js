@@ -256,5 +256,3 @@ apagarTudoBtn.addEventListener('click', () => {
   })();
 
 });
-
-
