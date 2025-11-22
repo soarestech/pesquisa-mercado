@@ -150,10 +150,10 @@ button.small {
 
 .table th,
 .table td {
-  padding: 6px;
+  padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .table th {
@@ -326,4 +326,5 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
