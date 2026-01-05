@@ -343,7 +343,8 @@ h6 {
 }
 
 .acoes-backup .btn {
-  min-width: 170px; /* deixa alinhado e bonito */
+   min-width: auto; /* ou 120px se quiser largura mínima menor */
+   padding: 6px 12px; /* ajusta conforme quiser */
 }
 
 @media (max-width: 600px) {
@@ -353,6 +354,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
