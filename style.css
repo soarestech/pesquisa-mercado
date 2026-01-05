@@ -334,10 +334,6 @@ h6 {
   width: 100%;
 }
 
-.titulo-listas-salvas {
-  margin-top: -10px; /* ajusta para subir o título */
-}
-
 .acoes-backup {
   display: flex;
   flex-direction: column;
@@ -360,6 +356,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
