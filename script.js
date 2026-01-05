@@ -164,9 +164,13 @@ async function renderizarListasSalvas() {
   listas.forEach((l) => {
     listasContainer.innerHTML += `
       <div class="lista-card">
-        <span>${l.mercado} | ${l.data}</span>
-        <button class="btn green small" onclick="abrirLista('${l.mercado}')">ABRIR</button>
-        <button class="btn red small" onclick="apagarLista('${l.mercado}')">APAGAR</button>
+        <div class="info-lista">
+          <strong>${l.mercado}</strong> | <span>${l.data}</span>
+        </div>
+        <div class="botoes-lista">
+          <button class="btn green small" onclick="abrirLista('${l.mercado}')">ABRIR</button>
+          <button class="btn red small" onclick="apagarLista('${l.mercado}')">APAGAR</button>
+        </div>
       </div>
     `;
   });
@@ -253,5 +257,6 @@ window.apagarLista = async function(mercado) {
 
   renderizarListasSalvas();
 });
+
 
 
