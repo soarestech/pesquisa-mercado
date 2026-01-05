@@ -337,7 +337,6 @@ h6 {
 .acoes-backup {
   display: flex;
   flex-direction: column;
-  margin-top: 5px; /* ajusta para descer os botões */
   gap: 10px; /* espaço entre os botões */
   align-items: flex-end; /* garante canto direito */
   padding-bottom: 14px;
@@ -355,8 +354,10 @@ h6 {
     width: auto !important;
     /* margin: 0 !important; */ /* Remover esta linha */
     display: block;
+    margin-top: 6px; /* espaço entre o título e o primeiro botão */
   }
 }
+
 
 
 
