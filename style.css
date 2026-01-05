@@ -283,7 +283,7 @@ h4 {
 
 /* Títulos "Itens da Lista" e "Listas Salvas" */
 h6 {
-  margin-top: -10px !important; /* subir um pouco */
+  margin-top: -5px !important; /* subir um pouco */
 }
 
 /* ====== LEGENDA ====== */
@@ -332,6 +332,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: -10px; /* ajusta para subir o título */
 }
 
 .acoes-backup {
@@ -356,6 +357,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
