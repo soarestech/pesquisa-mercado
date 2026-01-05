@@ -10,7 +10,7 @@
   <link rel="icon" href="icons/icon-192.png" type="image/png">
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	
+  
   <!-- Estilo principal -->
   <link rel="stylesheet" href="style.css?v=2">
 </head>
@@ -32,29 +32,29 @@
         </div>
         <div class="input-field">
           <label for="embalagem">Embalagem</label>
-		<select id="embalagem" required>
-		  <option value="" disabled selected hidden>Escolha</option>
-		  <option value="2 un">2 un</option>
-		  <option value="8 un">8 un</option>
-		  <option value="12 un">12 un</option>
-		  <option value="20 un">20 un</option>
-		  <option value="30 un">30 un</option>
-		  <option value="1 kg">1 kg</option>
-		  <option value="5 kg">5 kg</option>
-		  <option value="50 g">50 g</option>
-		  <option value="90 g">90 g</option>
-		  <option value="100 g">100 g</option>
-		  <option value="250 g">250 g</option>
-		  <option value="300 g">300 g</option>
-		  <option value="350 g">350 g</option>
-		  <option value="500 g">500 g</option>
-		  <option value="150 ml">150 ml</option>
-		  <option value="200 ml">200 ml</option>
-		  <option value="250 ml">250 ml</option>
-		  <option value="500 ml">500 ml</option>
-		  <option value="900 ml">900 ml</option>
-		  <option value="1 L">1 L</option>
-		</select>
+          <select id="embalagem" required>
+            <option value="" disabled selected hidden>Escolha</option>
+            <option value="2 un">2 un</option>
+            <option value="8 un">8 un</option>
+            <option value="12 un">12 un</option>
+            <option value="20 un">20 un</option>
+            <option value="30 un">30 un</option>
+            <option value="1 kg">1 kg</option>
+            <option value="5 kg">5 kg</option>
+            <option value="50 g">50 g</option>
+            <option value="90 g">90 g</option>
+            <option value="100 g">100 g</option>
+            <option value="250 g">250 g</option>
+            <option value="300 g">300 g</option>
+            <option value="350 g">350 g</option>
+            <option value="500 g">500 g</option>
+            <option value="150 ml">150 ml</option>
+            <option value="200 ml">200 ml</option>
+            <option value="250 ml">250 ml</option>
+            <option value="500 ml">500 ml</option>
+            <option value="900 ml">900 ml</option>
+            <option value="1 L">1 L</option>
+          </select>
         </div>
         <div class="input-field">
           <label for="valor">Preço (R$)</label>
@@ -68,10 +68,10 @@
 
     <!-- Lista atual -->
     <div class="card">
-<h6 id="titulo-lista">
-  <strong>Itens da Lista</strong>
-  <span id="nomeMercadoAtual"></span>
-</h6>
+      <h6 id="titulo-lista">
+        <strong>Itens da Lista</strong>
+        <span id="nomeMercadoAtual"></span>
+      </h6>
       <table class="table">
         <thead>
           <tr>
@@ -86,28 +86,35 @@
       <div class="center section">
         <button id="salvarLista" class="btn blue">Salvar Lista</button>
         <button id="apagarTudo" class="btn red">Limpar Lista</button>
+        <button id="exportarTXT" class="btn orange">EXPORTAR LISTAS</button>
+      </div>
+
+      <!-- Botões de backup JSON (direita, vertical) -->
+      <div class="backup-buttons">
+        <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP JSON</button>
+        <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
+        <input type="file" id="fileBackup" accept=".json" style="display:none">
       </div>
     </div>
 
     <!-- Listas salvas -->
-	<div class="card">
-	  <h6 style="justify-content: space-between; display: flex; align-items: center;">
-		<strong>Listas Salvas</strong>
-			<button id="exportarTXT" class="btn orange small">EXPORTAR LISTAS</button>
-	  </h6>
+    <div class="card">
+      <h6 style="justify-content: space-between; display: flex; align-items: center;">
+        <strong>Listas Salvas</strong>
+      </h6>
 
-	  <!-- LEGENDA (NOVO) -->
-	  <div class="legenda">
-		<div class="item-legenda">
-		  <span class="quadrado verde"></span> O Preço(R$) abaixou !
-		</div>
-		<div class="item-legenda">
-		  <span class="quadrado vermelho"></span> O Preço(R$) aumentou !
-		</div>
-	  </div>
+      <!-- LEGENDA (NOVO) -->
+      <div class="legenda">
+        <div class="item-legenda">
+          <span class="quadrado verde"></span> O Preço(R$) abaixou !
+        </div>
+        <div class="item-legenda">
+          <span class="quadrado vermelho"></span> O Preço(R$) aumentou !
+        </div>
+      </div>
 
-	  <div id="listasContainer" class="listas-salvas"></div>
-	</div>
+      <div id="listasContainer" class="listas-salvas"></div>
+    </div>
   </div>
 
   <!-- Script principal -->
