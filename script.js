@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   const mercadoInput = document.getElementById('mercado');
   const lista = document.getElementById('lista');
   const salvarListaBtn = document.getElementById('salvarLista');
-  const apagarTudoBtn = document.getElementById('apagarTudo');
   const adicionarBtn = document.getElementById('adicionar');
   const listasContainer = document.getElementById('listasContainer');
   const nomeMercadoAtual = document.getElementById('nomeMercadoAtual');
@@ -116,20 +115,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     valorInput.value = '';
     atualizarLista();
     atualizarNomeMercado();
-  });
-
-  // ===================== Apagar tudo
-  apagarTudoBtn.addEventListener('click', async () => {
-    produtos = [];
-    atualizarLista();
-    mercadoInput.value = '';
-    atualizarNomeMercado();
-    indiceEdicao = null;
-    adicionarBtn.textContent = 'Adicionar';
-    adicionarBtn.classList.replace('orange', 'green');
-    await limparListasIndexedDB();
-    renderizarListasSalvas();
-    Swal.fire('Lista limpa!');
   });
 
   // ===================== Salvar lista
@@ -257,6 +242,7 @@ window.apagarLista = async function(mercado) {
 
   renderizarListasSalvas();
 });
+
 
 
 
