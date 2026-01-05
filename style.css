@@ -332,6 +332,9 @@ h6 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.titulo-listas-salvas {
   margin-top: -10px; /* ajusta para subir o título */
 }
 
@@ -357,6 +360,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
