@@ -357,3 +357,21 @@ h6 {
     margin-top: 6px; /* espaço entre o título e o primeiro botão */
   }
 }
+
+.lista-card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.info-lista {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.botoes-lista {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
