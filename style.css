@@ -65,13 +65,13 @@ h4.center {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  height: 38px; /* altura fixa igual para input e select */
-  box-sizing: border-box; /* garante que padding não aumente altura */
+  height: 38px;
+  box-sizing: border-box;
 }
 
 .italico {
   font-style: italic;
-  color: #888; /* opcional, só para dar contraste */
+  color: #888;
 }
 
 /* ======== SELECT PLACEHOLDER (Escolha) ======== */
@@ -114,26 +114,13 @@ h4.center {
 /* Tamanho padrão (notebook / desktop) */
 button.small {
     font-size: 12px;
-    padding: 8px 10px;   /* Aumentei só a altura: de 4px → 8px */
+    padding: 8px 10px;
     border-radius: 6px;
-}
-
-/* Celulares (telas menores que 480px) */
-@media (max-width: 480px) {
-    button.small {
-        font-size: 11px;
-        padding: 6px 6px;  /* Aumentei a altura: de 3px → 6px */
-        border-radius: 5px;
-    }
 }
 
 .small {
   font-size: 0.85rem;
   padding: 6px 10px;
-}
-
-.center button {
-  margin: 6px;
 }
 
 /* Espaço maior entre tabela e botões */
@@ -162,19 +149,19 @@ button.small {
 
 /* ======== LINHA SELECIONADA ======== */
 tr.editando {
-  background-color: #fff3e0; /* fundo laranja claro */
+  background-color: #fff3e0;
   transition: background-color 0.3s ease;
 }
 
 tr.editando td {
   font-weight: bold;
-  color: #e65100; /* texto laranja escuro */
+  color: #e65100;
 }
 
 /* ======== LISTAS SALVAS ======== */
 .listas-salvas {
-  max-height: 40vh; /* altura máxima na tela */
-  overflow-y: auto; /* rolagem vertical */
+  max-height: 40vh;
+  overflow-y: auto;
   padding-right: 5px;
 }
 
@@ -199,36 +186,35 @@ tr.editando td {
   gap: 8px;
 }
 
-/* Afasta o botão ABRIR do nome da lista */
 .lista-botoes button {
-  margin-left: 8px;
+  margin-left: 8px; /* afasta o botão ABRIR do nome da lista */
 }
 
 /* ======== BOTÕES BACKUP JSON ======== */
 .backup-buttons {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* direita */
-  gap: 8px; /* espaço entre os botões */
+  align-items: flex-end;
+  gap: 8px;
   margin-top: 10px;
 }
 
 .backup-buttons button {
-  font-size: 0.85rem;  /* mantém o tamanho pequeno */
-  padding: 6px 10px;   /* mantém a mesma altura e largura dos botões pequenos originais */
-  border-radius: 6px;  /* arredondamento igual aos botões pequenos */
+  font-size: 0.85rem;  /* mantém tamanho pequeno */
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
 h6 {
   display: flex;
   align-items: center;
-  font-size: 0.85rem; /* igual aos inputs */
-  gap: 10px; /* distância entre "Itens da Lista" e o nome do mercado */
+  font-size: 0.85rem;
+  gap: 10px;
 }
 
 #nomeMercadoAtual {
-  font-size: 1rem; /* igual aos inputs */
+  font-size: 1rem;
   font-weight: 600;
   color: #1565c0;
 }
@@ -266,7 +252,7 @@ h6 {
   }
 }
 
-/* CSS para reduzir todos os SweetAlerts no celular */
+/* CSS para SweetAlerts */
 .swal2-popup {
   width: 80% !important;
   max-width: 260px !important;
@@ -295,16 +281,16 @@ h6 {
 
 /* ======== AJUSTES DE POSIÇÃO NOS TÍTULOS ======== */
 h4 {
-  margin-bottom: 10px !important; /* subir um pouco */
+  margin-bottom: 10px !important;
 }
 
 h6 {
-  margin-top: -5px !important; /* subir um pouco */
+  margin-top: -5px !important;
 }
 
 /* ====== LEGENDA ====== */
 .legenda {
-  margin-top: -15px !important; /* subir um pouco */
+  margin-top: -15px !important;
   margin-bottom: 15px;
   padding-left: 5px;
   font-size: 0.85rem;
@@ -342,5 +328,3 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
-
-
