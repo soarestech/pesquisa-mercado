@@ -88,13 +88,6 @@
         <button id="apagarTudo" class="btn red">Limpar Lista</button>
         <button id="exportarTXT" class="btn orange">EXPORTAR LISTAS</button>
       </div>
-
-      <!-- Botões de backup JSON (direita, vertical) -->
-      <div class="backup-buttons">
-        <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP JSON</button>
-        <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
-        <input type="file" id="fileBackup" accept=".json" style="display:none">
-      </div>
     </div>
 
     <!-- Listas salvas -->
@@ -102,6 +95,13 @@
       <h6 style="justify-content: space-between; display: flex; align-items: center;">
         <strong>Listas Salvas</strong>
       </h6>
+	  
+      <!-- Botões de backup JSON (direita, vertical) -->
+      <div class="backup-buttons">
+        <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP</button>
+        <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
+        <input type="file" id="fileBackup" accept=".json" style="display:none">
+      </div>
 
       <!-- LEGENDA (NOVO) -->
       <div class="legenda">
