@@ -326,3 +326,19 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
+.listas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.acoes-backup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.acoes-backup .btn {
+  width: 160px; /* opcional – mantém alinhado */
+}
