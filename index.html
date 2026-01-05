@@ -94,15 +94,11 @@
     <div class="card">
       <h6 style="justify-content: space-between; display: flex; align-items: center;">
         <strong>Listas Salvas</strong>
+		  <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP</button>
+          <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
+          <input type="file" id="fileBackup" accept=".json" style="display:none">
       </h6>
 	  
-      <!-- Botões de backup JSON (direita, vertical) -->
-      <div class="backup-buttons">
-        <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP</button>
-        <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
-        <input type="file" id="fileBackup" accept=".json" style="display:none">
-      </div>
-
       <!-- LEGENDA (NOVO) -->
       <div class="legenda">
         <div class="item-legenda">
