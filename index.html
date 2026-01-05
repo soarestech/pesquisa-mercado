@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
   <!-- Estilo principal -->
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <h4 class="center">📋 Pesquisa Mercados</h4>
 
     <!-- Formulário de entrada -->
-    <div class="card" style="position: relative;">
+    <div class="card">
       <div class="form-row">
         <div class="input-field">
           <label for="mercado">Nome do Mercado</label>
@@ -61,22 +61,32 @@
           <input id="valor" type="number" min="0" step="0.01" placeholder="0.00">
         </div>
       </div>
-
       <div class="center">
         <button id="adicionar" class="btn green">Adicionar</button>
       </div>
+    </div>
+
+    <!-- Lista atual -->
+    <div class="card">
+      <h6 id="titulo-lista">
+        <strong>Itens da Lista</strong>
+        <span id="nomeMercadoAtual"></span>
+      </h6>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Embalagem</th>
+            <th>Preço (R$)</th>
+          </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
 
       <div class="center section">
         <button id="salvarLista" class="btn blue">Salvar Lista</button>
         <button id="apagarTudo" class="btn red">Limpar Lista</button>
         <button id="exportarTXT" class="btn orange">EXPORTAR LISTAS</button>
-      </div>
-
-      <!-- Botões de Backup JSON (canto direito, vertical) -->
-      <div class="backup-buttons">
-        <button id="exportarJSON" class="btn green small">EXPORTAR BACKUP</button>
-        <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
-        <input type="file" id="fileBackup" accept=".json" style="display:none">
       </div>
     </div>
 
@@ -86,7 +96,13 @@
         <strong>Listas Salvas</strong>
       </h6>
 
-      <!-- LEGENDA -->
+      <!-- Botões EXPORTAR/IMPORTAR BACKUP JSON -->
+      <div class="backup-buttons">
+        <button class="btn blue" id="exportBackupBtn">EXPORTAR BACKUP</button>
+        <button class="btn green" id="importBackupBtn">IMPORTAR BACKUP</button>
+      </div>
+
+      <!-- LEGENDA (NOVO) -->
       <div class="legenda">
         <div class="item-legenda">
           <span class="quadrado verde"></span> O Preço(R$) abaixou !
@@ -104,5 +120,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
