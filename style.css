@@ -345,3 +345,10 @@ h6 {
   min-width: 170px; /* deixa alinhado e bonito */
 }
 
+@media (max-width: 600px) {
+  .acoes-backup button {
+    width: auto !important;
+    margin: 0 !important;
+    display: block;
+  }
+}
