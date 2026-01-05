@@ -332,7 +332,6 @@ h6 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: -10px; /* ajusta para subir o título */
 }
 
 .acoes-backup {
@@ -341,6 +340,7 @@ h6 {
   gap: 10px; /* espaço entre os botões */
   align-items: flex-end; /* garante canto direito */
   padding-bottom: 14px;
+  margin-top: 10px; /* ajusta para subir o título */
 }
 
 .acoes-backup .btn {
@@ -357,6 +357,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
