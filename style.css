@@ -330,15 +330,18 @@ h6 {
 .listas-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .acoes-backup {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px; /* espaço entre os botões */
+  align-items: flex-end; /* garante canto direito */
 }
 
 .acoes-backup .btn {
-  width: 160px; /* opcional – mantém alinhado */
+  min-width: 170px; /* deixa alinhado e bonito */
 }
+
