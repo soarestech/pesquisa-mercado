@@ -92,12 +92,19 @@
 
     <!-- Listas salvas -->
     <div class="card">
-      <h6 style="justify-content: space-between; display: flex; align-items: center;">
-        <strong>Listas Salvas</strong>
-		  <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP</button>
-          <button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
-          <input type="file" id="fileBackup" accept=".json" style="display:none">
-      </h6>
+<h6 class="listas-header">
+  <strong>Listas Salvas</strong>
+
+  <div class="acoes-backup">
+    <button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">
+      EXPORTAR BACKUP
+    </button>
+    <button id="importarJSON" class="btn blue small">
+      IMPORTAR BACKUP
+    </button>
+    <input type="file" id="fileBackup" accept=".json" style="display:none">
+  </div>
+</h6>
 	  
       <!-- LEGENDA (NOVO) -->
       <div class="legenda">
@@ -117,3 +124,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
