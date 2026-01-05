@@ -37,7 +37,6 @@ h4.center {
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
-  position: relative; /* necessário para posicionar backup-buttons */
 }
 
 /* ======== CAMPOS DE FORMULÁRIO ======== */
@@ -200,18 +199,18 @@ tr.editando td {
   gap: 8px;
 }
 
+/* Afasta o botão ABRIR do nome da lista */
 .lista-botoes button {
-  margin-left: 10px; /* afasta o botão ABRIR do nome da lista */
+  margin-left: 8px;
 }
 
 /* ======== BOTÕES BACKUP JSON ======== */
 .backup-buttons {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  align-items: flex-end; /* direita */
   gap: 8px; /* espaço entre os botões */
+  margin-top: 10px;
 }
 
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
@@ -259,18 +258,9 @@ h6 {
   #nomeMercadoAtual {
     font-size: 1.1rem;
   }
-
-  .backup-buttons {
-    position: static;   /* volta ao fluxo normal no mobile */
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 10px;
-    gap: 6px;
-  }
 }
 
 /* CSS para reduzir todos os SweetAlerts no celular */
-/* Ajuste geral para todos os SweetAlerts */
 .swal2-popup {
   width: 80% !important;
   max-width: 260px !important;
@@ -298,13 +288,10 @@ h6 {
 }
 
 /* ======== AJUSTES DE POSIÇÃO NOS TÍTULOS ======== */
-
-/* Título principal do app */
 h4 {
   margin-bottom: 10px !important; /* subir um pouco */
 }
 
-/* Títulos "Itens da Lista" e "Listas Salvas" */
 h6 {
   margin-top: -5px !important; /* subir um pouco */
 }
@@ -349,6 +336,3 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
-
-
-
