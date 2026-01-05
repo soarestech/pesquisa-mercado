@@ -352,3 +352,7 @@ h6 {
     display: block;
   }
 }
+
+.legenda {
+  margin-top: 15px !important;
+}
