@@ -283,7 +283,7 @@ h4 {
 
 /* Títulos "Itens da Lista" e "Listas Salvas" */
 h6 {
-  margin-top: 10px !important; /* subir um pouco */
+  margin-top: -10px !important; /* subir um pouco */
 }
 
 /* ====== LEGENDA ====== */
@@ -356,6 +356,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
