@@ -147,17 +147,37 @@ async function renderizarListasSalvas() {
   }
 
   listas.forEach((l) => {
-    listasContainer.innerHTML += `
-      <div class="lista-card">
-        <div class="info-lista">
-          <strong>${l.mercado}</strong> | <span>${l.data}</span>
-        </div>
-        <div class="botoes-lista">
-          <button class="btn green small" onclick="abrirLista('${l.mercado}')">ABRIR</button>
-          <button class="btn red small" onclick="apagarLista('${l.mercado}')">APAGAR</button>
-        </div>
+    const card = document.createElement('div');
+    card.className = 'lista-card';
+
+    card.innerHTML = `
+      <div class="info-lista">
+        <strong>${l.mercado}</strong> | <span>${l.data}</span>
+      </div>
+      <div class="botoes-lista">
+        <button class="btn green small btn-abrir" data-mercado="${l.mercado}">
+          ABRIR
+        </button>
+        <button class="btn red small btn-apagar" data-mercado="${l.mercado}">
+          APAGAR
+        </button>
       </div>
     `;
+
+    listasContainer.appendChild(card);
+  });
+
+  // eventos depois de renderizar
+  document.querySelectorAll('.btn-abrir').forEach(btn => {
+    btn.addEventListener('click', () => {
+      abrirLista(btn.dataset.mercado);
+    });
+  });
+
+  document.querySelectorAll('.btn-apagar').forEach(btn => {
+    btn.addEventListener('click', () => {
+      apagarLista(btn.dataset.mercado);
+    });
   });
 }
 
@@ -242,6 +262,7 @@ window.apagarLista = async function(mercado) {
 
   renderizarListasSalvas();
 });
+
 
 
 
