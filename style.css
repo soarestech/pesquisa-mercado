@@ -197,7 +197,6 @@ tr.editando td {
 .lista-botoes {
   display: flex;
   gap: 8px;
-	  margin-top: 8px; /* ajusta o espaço vertical entre o nome da lista e o botão */
 }
 
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
@@ -354,6 +353,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
