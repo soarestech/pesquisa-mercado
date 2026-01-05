@@ -213,6 +213,12 @@ tr.editando td {
   margin-top: 10px;
 }
 
+.backup-buttons button {
+  font-size: 0.85rem;  /* mantém o tamanho pequeno */
+  padding: 6px 10px;   /* mantém a mesma altura e largura dos botões pequenos originais */
+  border-radius: 6px;  /* arredondamento igual aos botões pequenos */
+}
+
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
 h6 {
   display: flex;
@@ -336,4 +342,5 @@ h6 {
   color: #e74c3c !important;
   font-weight: bold;
 }
+
 
