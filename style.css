@@ -339,7 +339,7 @@ h6 {
   flex-direction: column;
   gap: 10px; /* espaço entre os botões */
   align-items: flex-end; /* garante canto direito */
-  padding-bottom: 10px;
+  padding-bottom: 14px;
 }
 
 .acoes-backup .btn {
@@ -356,6 +356,7 @@ h6 {
     display: block;
   }
 }
+
 
 
 
