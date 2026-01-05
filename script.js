@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const mercadoInput = document.getElementById('mercado');
   const lista = document.getElementById('lista');
   const salvarListaBtn = document.getElementById('salvarLista');
+  const fecharListaBtn = document.getElementById('fecharLista');
   const adicionarBtn = document.getElementById('adicionar');
   const listasContainer = document.getElementById('listasContainer');
   const nomeMercadoAtual = document.getElementById('nomeMercadoAtual');
@@ -45,6 +46,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     tx.oncomplete = () => resolve();
     tx.onerror = e => reject(e.target.error);
   });
+
+  fecharListaBtn.addEventListener('click', () => {
+  fecharListaAtual();
+});
 
   const pegarListasIndexedDB = () => new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readonly');
@@ -135,6 +140,19 @@ document.addEventListener('DOMContentLoaded', async function () {
     renderizarListasSalvas();
     Swal.fire('Lista salva com sucesso!');
   });
+
+  // ===================== Fechar lista  
+  function fecharListaAtual() {
+  produtos = [];
+  mercadoInput.value = '';
+  indiceEdicao = null;
+
+  atualizarLista();
+  atualizarNomeMercado();
+
+  adicionarBtn.textContent = 'Adicionar';
+  adicionarBtn.classList.replace('orange', 'green');
+}
 
   // ===================== Renderizar listas salvas
 async function renderizarListasSalvas() {
@@ -262,6 +280,7 @@ window.apagarLista = async function(mercado) {
 
   renderizarListasSalvas();
 });
+
 
 
 
