@@ -179,6 +179,54 @@ document.addEventListener('DOMContentLoaded', async function () {
     atualizarNomeMercado();
   };
 
+   // ===================== Exportar Lista
+    // ⭐ ADIÇÃO: Exportar todas as listas para TXT em colunas (usa a mesma chave 'listasDeCompras')
+  // Botão #exportarTXT deve existir no HTML (conforme instrução anterior).
+  (function ativarExportarTXT() {
+    const btn = document.getElementById('exportarTXT');
+    if (!btn) return; // não faz nada se botão não existir
+
+    btn.addEventListener('click', function () {
+      const listas = JSON.parse(localStorage.getItem('listasDeCompras') || '[]');
+
+      if (!listas || listas.length === 0) {
+        Swal.fire('Nenhuma lista salva!', '', 'warning');
+        return;
+      }
+
+      let conteudo = '=== RELATÓRIO DE LISTAS SALVAS ===\n\n';
+
+      listas.forEach(listaObj => {
+        // Cabeçalho na mesma linha
+        conteudo += `MERCADO: ${listaObj.mercado}    DATA: ${listaObj.data}\n`;
+        conteudo += '------------------------------------------------------\n';
+
+        // Cabeçalho da "tabela"
+        conteudo += 'Produto'.padEnd(25) + 'Embalagem'.padEnd(18) + 'Valor (R$)\n';
+
+        // Itens da lista: atenção aos nomes das propriedades (nome, embalagem, valor)
+        (listaObj.produtos || []).forEach(item => {
+          const nomeProduto = (item.nome || '').toString();
+          const embal = (item.embalagem || '').toString();
+          const valorStr = (typeof item.valor !== 'undefined') ? parseFloat(item.valor).toFixed(2) : '';
+
+          conteudo += nomeProduto.padEnd(25) + embal.padEnd(18) + valorStr.padEnd(10) + '\n';
+        });
+
+        conteudo += '\n======================================================\n\n';
+      });
+
+      // Cria e baixa o arquivo
+      const blob = new Blob([conteudo], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'listas_salvas.pdf';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  })();
+
   // ===================== Export / Import JSON
   window.exportarBackupJSON = async function () {
     const listas = await pegarListasIndexedDB();
@@ -228,3 +276,4 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   renderizarListasSalvas();
 });
+
