@@ -197,11 +197,7 @@ tr.editando td {
 .lista-botoes {
   display: flex;
   gap: 8px;
-}
-
-/* ======== ESPAÇO ENTRE TEXTO DA LISTA E BOTÃO ABRIR ======== */
-.lista-card .btn {
-  margin-top: 8px; /* ajusta o espaço vertical entre o nome da lista e o botão */
+	  margin-top: 8px; /* ajusta o espaço vertical entre o nome da lista e o botão */
 }
 
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
@@ -358,5 +354,6 @@ h6 {
     display: block;
   }
 }
+
 
 
