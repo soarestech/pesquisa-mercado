@@ -152,22 +152,25 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   // ===================== Renderizar listas salvas
-  async function renderizarListasSalvas() {
-    const listas = await pegarListasIndexedDB();
-    listasContainer.innerHTML = '';
-    if (!listas || listas.length === 0) {
-      listasContainer.innerHTML = '<p class="grey-text">Nenhuma lista salva.</p>';
-      return;
-    }
-    listas.forEach((l) => {
-      listasContainer.innerHTML += `
-        <div class="lista-card">
-          <span>${l.mercado} | ${l.data}</span>
-          <button class="btn green small" onclick="abrirLista('${l.mercado}')">ABRIR</button>
-        </div>
-      `;
-    });
+async function renderizarListasSalvas() {
+  const listas = await pegarListasIndexedDB();
+  listasContainer.innerHTML = '';
+
+  if (!listas || listas.length === 0) {
+    listasContainer.innerHTML = '<p class="grey-text">Nenhuma lista salva.</p>';
+    return;
   }
+
+  listas.forEach((l) => {
+    listasContainer.innerHTML += `
+      <div class="lista-card">
+        <span>${l.mercado} | ${l.data}</span>
+        <button class="btn green small" onclick="abrirLista('${l.mercado}')">ABRIR</button>
+        <button class="btn red small" onclick="apagarLista('${l.mercado}')">APAGAR</button>
+      </div>
+    `;
+  });
+}
 
   window.abrirLista = async function (mercado) {
     const listas = await pegarListasIndexedDB();
@@ -178,6 +181,28 @@ document.addEventListener('DOMContentLoaded', async function () {
     atualizarLista();
     atualizarNomeMercado();
   };
+
+  window.apagarLista = async function(mercado) {
+  const tx = db.transaction(STORE_NAME, 'readwrite');
+  const store = tx.objectStore(STORE_NAME);
+  store.delete(mercado);
+
+  tx.oncomplete = async () => {
+    if (mercadoInput.value === mercado) {
+      produtos = [];
+      mercadoInput.value = '';
+      atualizarLista();
+      atualizarNomeMercado();
+      indiceEdicao = null;
+      adicionarBtn.textContent = 'Adicionar';
+      adicionarBtn.classList.replace('orange', 'green');
+    }
+    renderizarListasSalvas();
+    Swal.fire(`Lista "${mercado}" apagada!`);
+  };
+
+  tx.onerror = e => console.error('Erro ao apagar lista:', e.target.error);
+};
 
   // ===================== Export / Import JSON
   window.exportarBackupJSON = async function () {
@@ -228,3 +253,4 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   renderizarListasSalvas();
 });
+
