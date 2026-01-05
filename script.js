@@ -182,7 +182,7 @@ async function renderizarListasSalvas() {
     atualizarNomeMercado();
   };
 
-  window.apagarLista = async function(mercado) {
+window.apagarLista = async function(mercado) {
   const tx = db.transaction(STORE_NAME, 'readwrite');
   const store = tx.objectStore(STORE_NAME);
   store.delete(mercado);
@@ -253,4 +253,5 @@ async function renderizarListasSalvas() {
 
   renderizarListasSalvas();
 });
+
 
