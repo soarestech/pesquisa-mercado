@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'listas_salvas.pdf';
+      a.download = 'listas_salvas.txt';
       a.click();
       URL.revokeObjectURL(url);
     });
@@ -276,4 +276,5 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   renderizarListasSalvas();
 });
+
 
