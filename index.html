@@ -93,10 +93,15 @@
 	<div class="card">
 	  <h6 style="justify-content: space-between; display: flex; align-items: center;">
 		<strong>Listas Salvas</strong>
+		<div>
 			<button id="exportarTXT" class="btn orange small">EXPORTAR LISTAS</button>
+			<button id="exportarJSON" class="btn green small" onclick="exportarBackupJSON()">EXPORTAR BACKUP JSON</button>
+			<button id="importarJSON" class="btn blue small">IMPORTAR BACKUP</button>
+			<input type="file" id="fileBackup" accept=".json" style="display:none">
+		</div>
 	  </h6>
 
-	  <!-- LEGENDA (NOVO) -->
+	  <!-- LEGENDA -->
 	  <div class="legenda">
 		<div class="item-legenda">
 		  <span class="quadrado verde"></span> O Preço(R$) abaixou !
@@ -114,3 +119,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
