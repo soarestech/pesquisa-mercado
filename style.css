@@ -37,6 +37,7 @@ h4.center {
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
+  position: relative; /* necessário para posicionar backup-buttons */
 }
 
 /* ======== CAMPOS DE FORMULÁRIO ======== */
@@ -200,16 +201,17 @@ tr.editando td {
 }
 
 .lista-botoes button {
-  margin-left: 8px; /* afasta o botão do nome da lista */
+  margin-left: 10px; /* afasta o botão ABRIR do nome da lista */
 }
 
 /* ======== BOTÕES BACKUP JSON ======== */
 .backup-buttons {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* direita */
+  position: absolute;
+  top: 20px;
+  right: 20px;
   gap: 8px; /* espaço entre os botões */
-  margin-top: 10px;
 }
 
 /* ======== NOME DO MERCADO AO LADO DO TÍTULO ======== */
@@ -256,6 +258,14 @@ h6 {
 
   #nomeMercadoAtual {
     font-size: 1.1rem;
+  }
+
+  .backup-buttons {
+    position: static;   /* volta ao fluxo normal no mobile */
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 6px;
   }
 }
 
