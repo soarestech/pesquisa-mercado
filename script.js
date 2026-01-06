@@ -280,9 +280,3 @@ window.apagarLista = async function(mercado) {
 
   renderizarListasSalvas();
 });
-
-
-
-
-
-
