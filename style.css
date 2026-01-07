@@ -372,7 +372,7 @@ h6 {
 
 .botoes-lista {
   display: flex;
-  gap: 12px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
